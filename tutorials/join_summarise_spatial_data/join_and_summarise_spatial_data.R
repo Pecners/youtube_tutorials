@@ -141,3 +141,5 @@ hex_counts |>
        fill = "# of Wineries",
        caption = "Data from OpenStreetMap")
 
+ggsave("tutorials/join_summarise_spatial_data/thumbnail.png",
+       bg = "white")
