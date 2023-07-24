@@ -4,9 +4,6 @@ library(ggtext)
 library(glue)
 library(showtext)
 
-font_add("Imperial", "~/Library/Fonts/imperial-normal-400.2531995fefd3b997f9c4d564ebe89268 (1).ttf")
-showtext_auto()
-
 setwd("tutorials/nyt_graph_employment_by_gender")
 
 m <- read_csv("data/men.csv") |> 
