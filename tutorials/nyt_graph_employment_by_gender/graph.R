@@ -39,7 +39,7 @@ both |>
                  color = ifelse(group == "men", dotted_cols[1], dotted_cols[2])), 
                linetype = 3, size = .75) +
   geom_text(data = mean_2019, label = "2019 average",
-            x = ymd("2020-11-01"), 
+            x = ymd("2020-11-01"), fontface = "bold",
             aes(y = avg + 1,
                 color = ifelse(group == "men", dotted_cols[1], dotted_cols[2]))) +
   annotate(geom = "text", color = "grey50",
@@ -54,11 +54,11 @@ both |>
   geom_textbox(y = 69, x = ymd("2023-08-01"), 
                label = glue("The employment rate for ",
                             "<strong style='color:{dotted_cols[2]}'>women</strong> is now well above<br>its 2019 average."),
-               color = "grey20", box.size = 0, halign = 1, width = unit(1.8, "in"),
-               box.padding = unit(0, "pt")) +
+               color = "grey30", box.size = 0, halign = 1, width = unit(2, "in"),
+               box.padding = unit(0, "pt"), fontface = "bold") +
   annotate(geom = "curve", x = ymd("2023-08-01"), xend = ymd("2023-06-15"),
            y = 71.5, yend = 74.5, arrow = arrow(length = unit(.25, "cm")), 
-           curvature = .15, color = "grey20") +
+           curvature = .15, color = "grey30") +
   scale_y_continuous(breaks = seq(from = 60, to = 90, by = 10),
                      limits = c(60, 91.5), expand = c(0, 0)) +
   scale_x_date(expand = c(0, 0), limits = c(ymd("2018-09-01"), ymd("2024-04-01")),
@@ -78,8 +78,8 @@ both |>
         plot.title = element_text(hjust = .5, face = "bold",
                                   margin = margin(b = 20)),
         plot.caption = element_textbox(color = "grey50", hjust = 0,
-                                    family = "serif", size = 12,
-                                    width = unit(6, "in"), lineheight = 1.1, )) +
+                                    family = "serif", size = 11,
+                                    width = unit(6, "in"), lineheight = 1.1, face = "bold")) +
   labs(x = "",
        y = "",
        title = "Share of people ages 25 to 54 who are employed, by gender",
