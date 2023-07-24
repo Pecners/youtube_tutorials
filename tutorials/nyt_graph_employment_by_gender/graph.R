@@ -91,3 +91,4 @@ both |>
                   "Originally by NYTimes, recreated in R by Spencer Schien (@MrPecners)"))
 
 ggsave("imgs/recreation.png", bg = "white", w = unit(9, "in"), h = 6)
+
